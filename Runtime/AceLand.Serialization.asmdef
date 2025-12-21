@@ -1,0 +1,18 @@
+{
+    "name": "AceLand.Serialization",
+    "rootNamespace": "AceLand.Serialization",
+    "references": [
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:9599c860e93b7ae4e85de39489f649cf",
+        "GUID:1a972ba99344f904a9d50dc99b31faba"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
