@@ -15,17 +15,43 @@ namespace AceLand.Serialization
         public static JsonSerializerSettings JsonSerializerSettings { get; } = new()
         {
             ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
-            Converters = converters,
+            Converters = new List<JsonConverter>()
+            {
+                new ColorConverter(), new GradientConverter(), new AnimationCurveConverter(),
+                new Vector2Converter(), new Vector3Converter(), new Vector4Converter(),
+                new Vector2IntConverter(), new Vector3IntConverter(), new QuaternionConverter(),
+                new BoundsConverter(), new BoundsIntConverter(), new Matrix4X4Converter(),
+                new Hash128Converter(), new LayerMaskConverter(),
+                new RectIntConverter(), new RectConverter(),
+                new NativeFloat2Converter(), new NativeFloat3Converter(), new NativeFloat4Converter(),
+                new NativeQuaternionConverter(),
+                new NativeFloat2X2Converter(), new NativeFloat2X3Converter(), new NativeFloat2X4Converter(), 
+                new NativeFloat3X2Converter(), new NativeFloat3X3Converter(), new NativeFloat3X4Converter(),
+                new NativeFloat4X2Converter(), new NativeFloat4X3Converter(), new NativeFloat4X4Converter(),
+            },
         };
 
         public static JsonSerializerSettings JsonSerializerSettingsWithType { get; } = new()
         {
             TypeNameHandling = TypeNameHandling.Auto,
             ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
-            Converters = converters,
+            Converters = new List<JsonConverter>()
+            {
+                new ColorConverter(), new GradientConverter(), new AnimationCurveConverter(),
+                new Vector2Converter(), new Vector3Converter(), new Vector4Converter(),
+                new Vector2IntConverter(), new Vector3IntConverter(), new QuaternionConverter(),
+                new BoundsConverter(), new BoundsIntConverter(), new Matrix4X4Converter(),
+                new Hash128Converter(), new LayerMaskConverter(),
+                new RectIntConverter(), new RectConverter(),
+                new NativeFloat2Converter(), new NativeFloat3Converter(), new NativeFloat4Converter(),
+                new NativeQuaternionConverter(),
+                new NativeFloat2X2Converter(), new NativeFloat2X3Converter(), new NativeFloat2X4Converter(), 
+                new NativeFloat3X2Converter(), new NativeFloat3X3Converter(), new NativeFloat3X4Converter(),
+                new NativeFloat4X2Converter(), new NativeFloat4X3Converter(), new NativeFloat4X4Converter(),
+            },
         };
-        
-        private static readonly List<JsonConverter> converters = new()
+
+        public static List<JsonConverter> JsonConverters => new()
         {
             new ColorConverter(), new GradientConverter(), new AnimationCurveConverter(),
             new Vector2Converter(), new Vector3Converter(), new Vector4Converter(),
