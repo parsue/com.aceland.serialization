@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+using System;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace AceLand.Serialization.Json.Converters
@@ -28,10 +29,10 @@ namespace AceLand.Serialization.Json.Converters
                     switch (propertyName)
                     {
                         case "x":
-                            x = (int)(double)reader.Value;
+                            x = Convert.ToInt32(reader.Value);
                             break;
                         case "y":
-                            y = (int)(double)reader.Value;
+                            y = Convert.ToInt32(reader.Value);
                             break;
                     }
                 }
