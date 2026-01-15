@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.1.1] - 2026-01-15
+### Fixed
+- [JsonConverter] convert error on Vector2Int and Vector3Int
+
 ## [1.1.0] - 2026-01-08
 ### Added
 - [Json] Public JsonConverters now
