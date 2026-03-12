@@ -27,7 +27,7 @@ namespace AceLand.Serialization.Json
         public static bool IsValidJson(this string json)
         {
             if (json == null) return false;
-            if (json.Trim() == string.Empty) return true; 
+            if (string.IsNullOrWhiteSpace(json)) return false; 
             
             try
             {
