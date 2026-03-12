@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.1.2] - 2026-03-12
+### Fixed
+- [Json] fix IsValidJson empty string issue, should return false
+
 ## [1.1.1] - 2026-01-15
 ### Fixed
 - [JsonConverter] convert error on Vector2Int and Vector3Int
