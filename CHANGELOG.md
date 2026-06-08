@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.1.3] - 2026-06-08
+### Fixed
+- [Json] fix no data type on building with text
+
 ## [1.1.2] - 2026-03-12
 ### Fixed
 - [Json] fix IsValidJson empty string issue, should return false
