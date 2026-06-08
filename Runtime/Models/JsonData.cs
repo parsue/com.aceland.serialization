@@ -18,8 +18,9 @@ namespace AceLand.Serialization.Models
         
         private JsonData(string text, bool withTypeName)
         {
+            var settings = withTypeName ? AceSerialization.JsonSerializerSettingsWithType : AceSerialization.JsonSerializerSettings;
             Text = text;
-            Container = JsonConvert.DeserializeObject<JContainer>(text);
+            Container = JsonConvert.DeserializeObject<JContainer>(text, settings);
             WithTypeName = withTypeName;
         }
         
