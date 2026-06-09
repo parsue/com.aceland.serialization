@@ -33,7 +33,7 @@ namespace AceLand.Serialization
 
         public static JsonSerializerSettings JsonSerializerSettingsWithType { get; } = new()
         {
-            TypeNameHandling = TypeNameHandling.Auto,
+            TypeNameHandling = TypeNameHandling.Objects,
             ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
             Converters = new List<JsonConverter>()
             {

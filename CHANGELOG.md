@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.1.4] - 2026-06-09
+### Fixed
+- [Json] fix no data type issue
+
 ## [1.1.3] - 2026-06-08
 ### Fixed
 - [Json] fix no data type on building with text
