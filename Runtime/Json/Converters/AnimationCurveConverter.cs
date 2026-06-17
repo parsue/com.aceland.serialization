@@ -29,8 +29,9 @@ namespace AceLand.Serialization.Json.Converters
                 if (reader.TokenType == JsonToken.PropertyName)
                 {
                     var propertyName = (string)reader.Value;
+                    
                     reader.Read();
-                    switch (propertyName)
+                    switch (propertyName.ToLower())
                     {
                         case "keys":
                             keys = serializer.Deserialize<Keyframe[]>(reader);

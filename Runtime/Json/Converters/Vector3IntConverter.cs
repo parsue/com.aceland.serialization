@@ -28,7 +28,7 @@ namespace AceLand.Serialization.Json.Converters
                 {
                     var propertyName = (string)reader.Value;
                     reader.Read();
-                    switch (propertyName)
+                    switch (propertyName.ToLower())
                     {
                         case "x":
                             x = Convert.ToInt32(reader.Value);

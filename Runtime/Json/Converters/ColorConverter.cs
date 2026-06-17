@@ -31,7 +31,7 @@ namespace AceLand.Serialization.Json.Converters
                 {
                     var propertyName = (string)reader.Value;
                     reader.Read();
-                    switch (propertyName)
+                    switch (propertyName.ToLower())
                     {
                         case "r":
                             r = (float)(double)reader.Value;

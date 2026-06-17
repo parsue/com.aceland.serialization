@@ -73,7 +73,7 @@ namespace AceLand.Serialization.Json.Converters
                 {
                     var propertyName = (string)reader.Value;
                     reader.Read();
-                    switch (propertyName)
+                    switch (propertyName.ToLower())
                     {
                         case "colorKeys":
                             var colorKeyList = new System.Collections.Generic.List<GradientColorKey>();
@@ -90,7 +90,7 @@ namespace AceLand.Serialization.Json.Converters
                                         {
                                             var keyProp = (string)reader.Value;
                                             reader.Read();
-                                            switch (keyProp)
+                                            switch (keyProp.ToLower())
                                             {
                                                 case "time":
                                                     time = (float)(double)reader.Value;
@@ -104,7 +104,7 @@ namespace AceLand.Serialization.Json.Converters
                                                         {
                                                             var cProp = (string)reader.Value;
                                                             reader.Read();
-                                                            switch (cProp)
+                                                            switch (cProp.ToLower())
                                                             {
                                                                 case "r": r = (float)(double)reader.Value; break;
                                                                 case "g": g = (float)(double)reader.Value; break;
@@ -141,7 +141,7 @@ namespace AceLand.Serialization.Json.Converters
                                         
                                         var aProp = (string)reader.Value;
                                         reader.Read();
-                                        switch (aProp)
+                                        switch (aProp.ToLower())
                                         {
                                             case "time":
                                                 time = (float)(double)reader.Value;

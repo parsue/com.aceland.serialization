@@ -26,7 +26,7 @@ namespace AceLand.Serialization.Json.Converters
                 {
                     var propertyName = (string)reader.Value;
                     reader.Read();
-                    switch (propertyName)
+                    switch (propertyName.ToLower())
                     {
                         case "position":
                             position = serializer.Deserialize<Vector3Int>(reader);
