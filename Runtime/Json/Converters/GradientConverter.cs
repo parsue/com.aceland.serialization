@@ -75,7 +75,7 @@ namespace AceLand.Serialization.Json.Converters
                     reader.Read();
                     switch (propertyName.ToLower())
                     {
-                        case "colorKeys":
+                        case "colorkeys":
                             var colorKeyList = new System.Collections.Generic.List<GradientColorKey>();
                             if (reader.TokenType == JsonToken.StartArray)
                             {
@@ -126,7 +126,7 @@ namespace AceLand.Serialization.Json.Converters
                             colorKeys = colorKeyList.ToArray();
                             break;
 
-                        case "alphaKeys":
+                        case "alphakeys":
                             var alphaKeyList = new System.Collections.Generic.List<GradientAlphaKey>();
                             if (reader.TokenType == JsonToken.StartArray)
                             {
