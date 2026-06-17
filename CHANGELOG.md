@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [1.1.5] - 2026-06-17
+## [1.1.6] - 2026-06-17
 ### Modified
 - [JsonConverter] ignore letter case of field name
 
