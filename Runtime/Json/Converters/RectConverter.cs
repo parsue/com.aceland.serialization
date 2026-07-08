@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace AceLand.Serialization.Json.Converters
@@ -31,10 +32,10 @@ namespace AceLand.Serialization.Json.Converters
                     reader.Read();
                     switch (propertyName.ToLower())
                     {
-                        case "x": x = (float)(double)reader.Value; break;
-                        case "y": y = (float)(double)reader.Value; break;
-                        case "width": width = (float)(double)reader.Value; break;
-                        case "height": height = (float)(double)reader.Value; break;
+                        case "x": x = Convert.ToSingle(reader.Value); break;
+                        case "y": y = Convert.ToSingle(reader.Value); break;
+                        case "width": width = Convert.ToSingle(reader.Value); break;
+                        case "height": height = Convert.ToSingle(reader.Value); break;
                     }
                 }
                 else if (reader.TokenType == JsonToken.EndObject)

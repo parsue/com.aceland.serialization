@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace AceLand.Serialization.Json.Converters
@@ -12,7 +13,7 @@ namespace AceLand.Serialization.Json.Converters
 
         public override LayerMask ReadJson(JsonReader reader, System.Type objectType, LayerMask existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
-            return new LayerMask { value = (int)(long)reader.Value };
+            return new LayerMask { value = Convert.ToInt32(reader.Value) };
         }
     }
 }

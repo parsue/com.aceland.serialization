@@ -93,7 +93,7 @@ namespace AceLand.Serialization.Json.Converters
                                             switch (keyProp.ToLower())
                                             {
                                                 case "time":
-                                                    time = (float)(double)reader.Value;
+                                                    time = Convert.ToSingle(reader.Value);
                                                     break;
                                                 case "color" when reader.TokenType == JsonToken.StartObject:
                                                 {
@@ -106,10 +106,10 @@ namespace AceLand.Serialization.Json.Converters
                                                             reader.Read();
                                                             switch (cProp.ToLower())
                                                             {
-                                                                case "r": r = (float)(double)reader.Value; break;
-                                                                case "g": g = (float)(double)reader.Value; break;
-                                                                case "b": b = (float)(double)reader.Value; break;
-                                                                case "a": a = (float)(double)reader.Value; break;
+                                                                case "r": r = Convert.ToSingle(reader.Value); break;
+                                                                case "g": g = Convert.ToSingle(reader.Value); break;
+                                                                case "b": b = Convert.ToSingle(reader.Value); break;
+                                                                case "a": a = Convert.ToSingle(reader.Value); break;
                                                             }
                                                         }
                                                     }
@@ -144,10 +144,10 @@ namespace AceLand.Serialization.Json.Converters
                                         switch (aProp.ToLower())
                                         {
                                             case "time":
-                                                time = (float)(double)reader.Value;
+                                                time = Convert.ToSingle(reader.Value);
                                                 break;
                                             case "alpha":
-                                                alpha = (float)(double)reader.Value;
+                                                alpha = Convert.ToSingle(reader.Value);
                                                 break;
                                         }
                                     }

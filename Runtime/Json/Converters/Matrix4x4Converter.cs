@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace AceLand.Serialization.Json.Converters
@@ -24,7 +25,7 @@ namespace AceLand.Serialization.Json.Converters
             {
                 if (reader.TokenType == JsonToken.Float || reader.TokenType == JsonToken.Integer)
                 {
-                    matrix[index] = (float)(double)reader.Value;
+                    matrix[index] = Convert.ToSingle(reader.Value);
                     index++;
                 }
                 else if (reader.TokenType == JsonToken.EndArray)
