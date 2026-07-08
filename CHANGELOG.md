@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.1.7] -2026-07-08
+### Fixed
+- [JsonConverter] issues on value is 1 `number in js` but fail to serialize to 1f `float in c#`
+
 ## [1.1.6] - 2026-06-17
 ### Modified
 - [JsonConverter] ignore letter case of field name
