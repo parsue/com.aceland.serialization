@@ -1,16 +1,16 @@
 using System;
 using System.Threading.Tasks;
 using AceLand.Serialization.Models;
-using AceLand.TaskUtils;
 using Newtonsoft.Json;
+using UnityEngine;
 
 namespace AceLand.Serialization.Json
 {
     public static class JsonAsyncExtension
     {
-        public static Promise<JsonData> ToJsonAsync<T>(this T data, bool withTypeName = false)
+        public static Task<JsonData> ToJsonAsync<T>(this T data, bool withTypeName = false)
         {
-            var token = Promise.ApplicationAliveToken;
+            var token = Application.exitCancellationToken;
             return Task.Run(() =>
                 {
                     try
@@ -35,9 +35,9 @@ namespace AceLand.Serialization.Json
             );
         }
 
-        public static Promise<T> ToDataAsync<T>(this JsonData jsonData)
+        public static Task<T> ToDataAsync<T>(this JsonData jsonData)
         {
-            var token = Promise.ApplicationAliveToken;
+            var token = Application.exitCancellationToken;
             return Task.Run(() =>
                 {
                     try

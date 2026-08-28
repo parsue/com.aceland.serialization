@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [3.0.0] - 2026-08-28
+### Changed
+- Removed all dependencies on other AceLand packages; the package is now fully standalone.
+
 ## [1.1.7] -2026-07-08
 ### Fixed
 - [JsonConverter] issues on value is 1 `number in js` but fail to serialize to 1f `float in c#`
